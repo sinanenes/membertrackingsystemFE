@@ -1,0 +1,51 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+<div class="form-froup row" > 
+    <label class="col-sm-2 col-form-label">Kisi Adi</label>
+    <div class="col-sm-10"> 
+        <input type="text" class="form-control" [(ngModel)]="KisiAdi" placeholder="Kisi Adi Gir">
+    </div>
+    <label class="col-sm-2 col-form-label">Kisi Soyadi</label>
+    <div class="col-sm-10"> 
+        <input type="text" class="form-control" [(ngModel)]="KisiSoyadi" placeholder="Kisi Soyadi Adi Gir">
+    </div>
+    <label class="col-sm-2 col-form-label">TC No</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="TCNo" placeholder="TC No Gir">
+    </div>
+    <label class="col-sm-2 col-form-label">Uye No</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UyeNo" placeholder="Uye No Gir">
+    </div>
+    <!-- <label class="col-sm-2 col-form-label">Kisi Tipi Kod</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="KisiTipiKod" placeholder="Kisi Tipi Kod Gir">
+    </div> -->
+    <label class="col-sm-2 col-form-label">Kisi Tipi</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="KisiTipiKod">
+            <option>--Select--</option>
+            <option *ngFor="let tipiKodName of KisiTipleriList" [value]="tipiKodName.KodDeger">
+                {{tipiKodName.KodAdi}}
+            </option>
+        </select>
+    </div>
+    <label class="col-sm-2 col-form-label">Kisi Foto Adi</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="KisiFotoAdi" placeholder="Kisi Foto Adi Gir">
+    </div>
+</div>
+<div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=KisiFotoDosyaYolu height="250px;" width="200px;">
+    <input type="file" (change)="uploadPhoto($event)" class="mt-2" />
+</div>
+
+</div>
+
+<button type="button" (click)="addKisi()" *ngIf="kisi.KisiId==0" class="btn btn-primary float-end">
+    Kisi Ekle
+</button>
+
+<button type="button" (click)="updateKisi()" *ngIf="kisi.KisiId!=0" class="btn btn-primary float-end">
+    Kisi Guncelle
+</button>

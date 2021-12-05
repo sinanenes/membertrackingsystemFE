@@ -1,0 +1,61 @@
+<h3 class="d-flex justify-content-center">PROJE I</h3>
+<h5 class="d-flex justify-content-center">Dernek Uye Yonetim Sistemi</h5>
+<!-- <form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Kullanici Adi</label>
+        <input type="email" class="form-control" name="kullaniciAdi" [(ngModel)]="email">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Parola</label>
+        <input type="password" class="form-control" name="parola" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="logInUser()">Giris</button>
+</form> -->
+<!-- <router-outlet></router-outlet> -->
+
+<div class="container" style="padding-top:60px;">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card-group">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <form name="form" (ngSubmit)="logInUser()" #f="ngForm">
+                            <h1 style="text-align:center">Login</h1>
+
+                            <div class="input-group mb-3">
+                                <!-- <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-user"></i></span>
+                                </div> -->
+                                <input type="text" name="UserName" [(ngModel)]="email"
+                                    class="form-control sty1" placeholder="Email" required>
+                            </div>
+                            <div class="input-group mb-4">
+                                <!-- <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                                </div> -->
+                                <input type="password" name="Password" [(ngModel)]="password" class="form-control"
+                                    placeholder="Password" required>
+                            </div>
+                            <div>
+                                <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success">
+                                    {{errorMessage}}
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-primary px-4">Login</button>
+                                </div>
+                                <!-- <div class="col-6 text-right">
+                                    <button type="button" class="btn btn-link px-0">Forgot password?</button>
+                                </div> -->
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

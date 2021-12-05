@@ -1,0 +1,41 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row">
+        <label class="col-sm-2 col-form-label">Kisi Id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KisiId" placeholder="Kisi Id Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Borc Tarihi</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [ngModel]="BorcTarih | date:'yyyy-MM-dd'"
+                (ngModelChange)="BorcTarih = $event" placeholder="Borc Tarihi Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Donem Ay Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="DonemAyKod" placeholder="Donem Ay Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Donem Yil Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="DonemYilKod" placeholder="Donem Yil Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Borc Tur Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="BorcTurKod" placeholder="Borc Tur Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Borc Tutar</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="BorcTutar" placeholder="Borc Tutar Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Aciklama</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Aciklama" placeholder="Aciklama Gir">
+        </div>
+</div>
+
+<button type="button" (click)="addBorc()" *ngIf="borc.BorcId==0" class="btn btn-primary float-end">
+    Borc Ekle
+</button>
+
+<button type="button" (click)="updateBorc()" *ngIf="borc.BorcId!=0" class="btn btn-primary float-end">
+    Borc Guncelle
+</button>
