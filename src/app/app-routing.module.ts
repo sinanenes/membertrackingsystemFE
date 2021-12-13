@@ -11,10 +11,11 @@ import { BorclarComponent } from './borclar/borclar.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path:'kisiler',component:KisilerComponent },
+  // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'kisiler', component: KisilerComponent },
   { path: 'kurslar', component: KurslarComponent },
-  {path: 'bilgilendirmeler',component:BilgilendirmelerComponent},
+  { path: 'bilgilendirmeler', component: BilgilendirmelerComponent},
   { path: 'borclar', component: BorclarComponent }
 
   // otherwise redirect to home
