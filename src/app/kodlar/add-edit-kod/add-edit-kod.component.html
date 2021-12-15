@@ -1,1 +1,25 @@
-<p>add-edit-kod works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row">
+        <label class="col-sm-2 col-form-label">Kod Adi</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KodAdi" placeholder="Kod Adi Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Kod Deger</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KodDeger" placeholder="Kod Deger Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Kod Grup</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KodGrup" placeholder="Kod Grup Gir">
+        </div>
+    </div>
+</div>
+
+<button type="button" (click)="addKod()" *ngIf="kod.KodId==0" class="btn btn-primary float-end">
+    Kod Ekle
+</button>
+
+<button type="button" (click)="updateKod()" *ngIf="kod.KodId!=0" class="btn btn-primary float-end">
+    Kod Guncelle
+</button>
