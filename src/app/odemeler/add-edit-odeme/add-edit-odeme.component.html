@@ -1,1 +1,49 @@
-<p>add-edit-odeme works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row">
+        <label class="col-sm-2 col-form-label">Kullanici Id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KullaniciId" placeholder="Kullanici Id Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Kisi Id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KisiId" placeholder="Kisi Id Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Odeme Tutar</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="OdemeTutar" placeholder="Odeme Tutar Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Odeme Tarihi</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [ngModel]="OdemeTarih | date:'yyyy-MM-dd'"
+                (ngModelChange)="OdemeTarih = $event" placeholder="Odeme Tarihi Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Odeme Tur Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="OdemeTurKod" placeholder="Odeme Tur Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Donem Ay Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="DonemAyKod" placeholder="Donem Ay Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Donem Yil Kod</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="DonemYilKod" placeholder="Donem Yil Kod Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">KasaBanka Id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="KasaBankaId" placeholder="KasaBanka Id Gir">
+        </div>
+        <label class="col-sm-2 col-form-label">Aciklama</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Aciklama" placeholder="Aciklama Gir">
+        </div>
+    </div>
+</div>
+<button type="button" (click)="addOdeme()" *ngIf="odeme.OdemeId==0" class="btn btn-primary float-end">
+    Odeme Ekle
+</button>
+
+<button type="button" (click)="updateOdeme()" *ngIf="odeme.OdemeId!=0" class="btn btn-primary float-end">
+    Odeme Guncelle
+</button>
