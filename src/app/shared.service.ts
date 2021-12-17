@@ -141,7 +141,9 @@ export class SharedService {
   getKullanicilarList(): Observable<any[]> {
     return this.http.get<any>(this.APIUrl + '/Kullanicilar');
   }
-
+  getKullaniciByKullaniciAdiParolaList(val1:any,val2:any): Observable<any[]> {
+    return this.http.get<any>(this.APIUrl + '/Kullanicilar/'+ val1+'/'+ val2);
+  }
   addKullanici(val: any) {
     return this.http.post(this.APIUrl + '/Kullanicilar', val);
   }

@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
       email:this.email,
       password:this.password
     });
-    this.errorMessage = this.authservice.login(this.form.value);
+    //this.errorMessage = this.authservice.login(this.form.value);
+    this.authservice.login(this.form.value);
   }
 
 }
