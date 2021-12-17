@@ -77,7 +77,7 @@
         <tr *ngFor="let dataItem of BorclarList">
             <td>{{dataItem.BorcId}}</td>
             <td>{{dataItem.KisiId}}</td>
-            <td>{{dataItem.BorcTarih}}</td>
+            <td>{{dataItem.BorcTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.DonemAyKod}}</td>
             <td>{{dataItem.DonemYilKod}}</td>
             <td>{{dataItem.BorcTurKod}}</td>

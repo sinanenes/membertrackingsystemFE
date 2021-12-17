@@ -78,7 +78,7 @@
         <tr *ngFor="let dataItem of TahsilatlarList">
             <td>{{dataItem.TahsilatId}}</td>
             <td>{{dataItem.KisiId}}</td>
-            <td>{{dataItem.TahsilatTarih}}</td>
+            <td>{{dataItem.TahsilatTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.DonemAyKod}}</td>
             <td>{{dataItem.DonemYilKod}}</td>
             <td>{{dataItem.TahsilatTurKod}}</td>

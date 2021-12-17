@@ -76,8 +76,8 @@
         <tr *ngFor="let dataItem of SorularList">
             <td>{{dataItem.SoruId}}</td>
             <td>{{dataItem.KullaniciId}}</td>
-            <td>{{dataItem.SoruTarih}}</td>
-            <td>{{dataItem.CevapTarih}}</td>
+            <td>{{dataItem.SoruTarih | date:'dd.MM.yyyy'}}</td>
+            <td>{{dataItem.CevapTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.SoruMetni}}</td>
             <td>{{dataItem.CevapMetni}}</td>
             <td>{{dataItem.CevaplayanId}}</td>
