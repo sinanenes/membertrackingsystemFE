@@ -62,14 +62,14 @@
                         </svg>
                     </button>
                 </div>
-                Kisi Id
+                Kisi
             </th>
             <th>Tahsilat Tarih</th>
-            <th>Donem Ay Kod</th>
-            <th>Donem Yil Kod</th>
-            <th>Tahsilat Tur Kod</th>
+            <th>Donem Ay</th>
+            <th>Donem Yil</th>
+            <th>Tahsilat Tur</th>
             <th>Tahsilat Tutar</th>
-            <th>KasaBanka Id</th>
+            <th>KasaBanka</th>
             <th>Aciklama</th>
             <th>Secenekler</th>
         </tr>
@@ -77,13 +77,13 @@
     <tbody>
         <tr *ngFor="let dataItem of TahsilatlarList">
             <td>{{dataItem.TahsilatId}}</td>
-            <td>{{dataItem.KisiId}}</td>
+            <td>{{dataItem.KisiAdiSoyadi}}</td>
             <td>{{dataItem.TahsilatTarih | date:'dd.MM.yyyy'}}</td>
-            <td>{{dataItem.DonemAyKod}}</td>
-            <td>{{dataItem.DonemYilKod}}</td>
-            <td>{{dataItem.TahsilatTurKod}}</td>
+            <td>{{dataItem.DonemAyKodDeger}}</td>
+            <td>{{dataItem.DonemYilKodDeger}}</td>
+            <td>{{dataItem.TahsilatTurKodDeger}}</td>
             <td>{{dataItem.TahsilatTutar}}</td>
-            <td>{{dataItem.KasaBankaId}}</td>
+            <td>{{dataItem.KasaBankaAdi}}</td>
             <td>{{dataItem.Aciklama}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#exampleModal"

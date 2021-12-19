@@ -62,12 +62,12 @@
                         </svg>
                     </button>
                 </div>
-                Kisi Id
+                Kişi
             </th>
             <th>Borc Tarih</th>
-            <th>Donem Ay Kod</th>
-            <th>Donem Yil Kod</th>
-            <th>Borc Tur Kod</th>
+            <th>Donem Ay</th>
+            <th>Donem Yil</th>
+            <th>Borc Tur</th>
             <th>Borc Tutar</th>
             <th>Aciklama</th>
             <th>Secenekler</th>
@@ -76,11 +76,11 @@
     <tbody>
         <tr *ngFor="let dataItem of BorclarList">
             <td>{{dataItem.BorcId}}</td>
-            <td>{{dataItem.KisiId}}</td>
+            <td>{{dataItem.BorcAdiSoyadi}}</td>
             <td>{{dataItem.BorcTarih | date:'dd.MM.yyyy'}}</td>
-            <td>{{dataItem.DonemAyKod}}</td>
-            <td>{{dataItem.DonemYilKod}}</td>
-            <td>{{dataItem.BorcTurKod}}</td>
+            <td>{{dataItem.DonemAyKodDeger}}</td>
+            <td>{{dataItem.DonemYilKodDeger}}</td>
+            <td>{{dataItem.BorcTurKodDeger}}</td>
             <td>{{dataItem.BorcTutar}}</td>
             <td>{{dataItem.Aciklama}}</td>
             <td>

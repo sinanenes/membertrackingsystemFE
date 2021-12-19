@@ -44,7 +44,7 @@
                 </div>
                 Odeme Id
             </th>
-            <th>Kullanici Id</th>
+            <th>Kullanici</th>
             <th>
                 <div class="d-flex flex-row">
                     <input [(ngModel)]="KisiIdFilter" class="form-control" (keyup)="filterFn()" placeholder="Filter">
@@ -63,14 +63,14 @@
                         </svg>
                     </button>
                 </div>
-                Kisi Id
+                Kisi
             </th>
             <th>Odeme Tutar</th>
             <th>Odeme Tarih</th>
-            <th>Odeme Tur Kod</th>
-            <th>Donem Ay Kod</th>
-            <th>Donem Yil Kod</th>
-            <th>Kasa Banka Id</th>
+            <th>Odeme Tur</th>
+            <th>Donem Ay</th>
+            <th>Donem Yil</th>
+            <th>Kasa Banka</th>
             <th>Aciklama</th>
             <th>Secenekler</th>
         </tr>
@@ -78,14 +78,14 @@
     <tbody>
         <tr *ngFor="let dataItem of OdemelerList">
             <td>{{dataItem.OdemeId}}</td>
-            <td>{{dataItem.KullaniciId}}</td>
-            <td>{{dataItem.KisiId}}</td>
+            <td>{{dataItem.KullaniciAdi}}</td>
+            <td>{{dataItem.KisiAdiSoyadi}}</td>
             <td>{{dataItem.OdemeTutar}}</td>
             <td>{{dataItem.OdemeTarih | date:'dd.MM.yyyy'}}</td>
-            <td>{{dataItem.OdemeTurKod}}</td>
-            <td>{{dataItem.DonemAyKod}}</td>
-            <td>{{dataItem.DonemYilKod}}</td>
-            <td>{{dataItem.KasaBankaId}}</td>
+            <td>{{dataItem.OdemeTurKodDeger}}</td>
+            <td>{{dataItem.DonemAyKodDeger}}</td>
+            <td>{{dataItem.DonemYilKodDeger}}</td>
+            <td>{{dataItem.KasaBankaAdi}}</td>
             <td>{{dataItem.Aciklama}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#exampleModal"

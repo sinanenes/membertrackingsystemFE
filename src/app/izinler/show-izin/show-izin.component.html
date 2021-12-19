@@ -46,7 +46,7 @@
                 </div>
                 Izin Id
             </th>
-            <th>Kisi Id</th>
+            <th>Kisi</th>
             <th>Baslangic Tarihi</th>
             <th>Bitis Tarihi</th>
             <th>Aciklama</th>
@@ -55,7 +55,7 @@
     <tbody>
         <tr *ngFor="let dataItem of IzinlerList">
             <td>{{dataItem.IzinId}}</td>
-            <td>{{dataItem.KisiId}}</td>
+            <td>{{dataItem.IzinAdiSoyadi}}</td>
             <td>{{dataItem.BaslangicTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.BitisTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.Aciklama}}</td>

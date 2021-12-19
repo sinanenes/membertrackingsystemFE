@@ -45,8 +45,8 @@
                 </div>
                 Kurs Kayit Uye Id
             </th>
-            <th>Kurs Id</th>
-            <th>Uye Id</th>
+            <th>Kurs Adi</th>
+            <th>Uye</th>
             <th>Baslangic Tarihi</th>
             <th>Bitis Tarihi</th>
             <th>Secenekler</th>
@@ -55,8 +55,8 @@
     <tbody>
         <tr *ngFor="let dataItem of KursKayitUyelerList">
             <td>{{dataItem.KursKayitUyeId}}</td>
-            <td>{{dataItem.KursId}}</td>
-            <td>{{dataItem.UyeId}}</td>
+            <td>{{dataItem.KursAdi}}</td>
+            <td>{{dataItem.KursKayitUyeAdiSoyadi}}</td>
             <td>{{dataItem.BaslangicTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.BitisTarih | date:'dd.MM.yyyy'}}</td>
             <td>

@@ -62,25 +62,25 @@
                         </svg>
                     </button>
                 </div>
-                Kullanici Id
+                Soran Kullanici
             </th>
             <th>Soru Tarih</th>
             <th>Cevap Tarih</th>
             <th>Soru Metni</th>
             <th>Cevap Metni</th>
-            <th>Cevaplayan Id</th>
+            <th>Cevaplayan Kullanici</th>
             <th>Secenekler</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of SorularList">
             <td>{{dataItem.SoruId}}</td>
-            <td>{{dataItem.KullaniciId}}</td>
+            <td>{{dataItem.SoranKullanici}}</td>
             <td>{{dataItem.SoruTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.CevapTarih | date:'dd.MM.yyyy'}}</td>
             <td>{{dataItem.SoruMetni}}</td>
             <td>{{dataItem.CevapMetni}}</td>
-            <td>{{dataItem.CevaplayanId}}</td>
+            <td>{{dataItem.CevaplayanKullanici}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false">

@@ -67,8 +67,8 @@
                 </div>
                 Kullanici Adi
             </th>
-            <th>Kullanici Tipi Kod</th>
-            <th>Aktif Pasif Kod</th>
+            <th>Kullanici Tipi</th>
+            <th>Aktif Pasif</th>
             <th>Secenekler</th>
         </tr>
     </thead>
@@ -76,8 +76,8 @@
         <tr *ngFor="let dataItem of KullanicilarList">
             <td>{{dataItem.KullaniciId}}</td>
             <td>{{dataItem.KullaniciAdi}}</td>
-            <td>{{dataItem.KullaniciTipiKod}}</td>
-            <td>{{dataItem.AktifPasifKod}}</td>
+            <td>{{dataItem.KullaniciTipiKodDeger}}</td>
+            <td>{{dataItem.AktifPasifKodDeger}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false">
